@@ -39,7 +39,6 @@
 			return regPrice.test(str);
 		}
 
-
 		//补充中...
 	};
 
