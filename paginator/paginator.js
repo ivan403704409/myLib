@@ -1,7 +1,8 @@
 var Paginator = (function () {
-	
+	var obj = null;
 	function Paginator(argument) {
-		
+		obj = obj ? obj : this;
+		return obj;
 	}
 
 	Paginator.prototype = {
