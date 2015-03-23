@@ -7,6 +7,12 @@ var Paginator = (function () {
 
 	Paginator.prototype = {
 
+		/**
+		 * 获取分页html
+		 * @param  {[type]} total [总页数]
+		 * @param  {[type]} iPage [当前是第几页，默认是 1 ]
+		 * @return {[type]}       [description]
+		 */
 		getHtml: function (total, iPage) {
 			var self = this;
 			if( (self.total = total) < 1 )return '';
