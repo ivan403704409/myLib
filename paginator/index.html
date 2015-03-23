@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>NEC：更好的CSS方案</title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+</head>
+<body>
+  <div id="div1"></div>
+
+ <script src="data.js"></script>
+ <script src="page.js"></script>
+ <script>
+ var o = new Paginator();
+ document.getElementById('div1').innerHTML = o.getHtml(data.total, data.iPage);
+ </script>
+</body>
+</html>
