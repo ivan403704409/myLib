@@ -3,7 +3,7 @@
  * Author: Ivan
  * Date: 2015.04.17
  * Email: 403704409@qq.com
- * 
+ * 只需最大尺寸时的尺寸文字大小,和最小的尺寸,就会自动计算 改变不同尺寸下的文字大小
  * 用法：
  *
 	html:  	
@@ -13,7 +13,9 @@
 	$demo = $('.demo');
 	$('.demo').fontAdapt({ maxFs: 36 });
 	$(window).on('resize', function (){
-		$demo.fontAdapt();
+		$demo.fontAdapt({
+			maxFs: 36
+		});
 	});
  */
 
