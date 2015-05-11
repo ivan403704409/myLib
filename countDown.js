@@ -49,13 +49,12 @@ function getDis(iTime){
   if( iDis < 0 )return '';
 
   var res = 0;
-  if( (res = parseInt( iDis/3.1536e10 )) > 0 )return res+'年前';  
-  if( (res = parseInt( iDis/2.592e9 )) > 0 )return res+'个月前';
-  if( (res = parseInt( iDis/8.64e7 )) > 0 )return res+'天前';  
-  if( (res = parseInt( iDis/3.6e6 )) > 0 )return res+'小时前';
-  if( (res = parseInt( iDis/6e4 )) > 0 )return res+'分钟前'; 
+  if( (res = iDis/3.1536e10) > 1 )return parseInt(res) + '年前';  
+  if( (res = iDis/2.592e9)  > 1 )return parseInt(res) + '个月前';
+  if( (res = iDis/8.64e7)  > 1 )return parseInt(res) + '天前';  
+  if( (res = iDis/3.6e6)  > 1 )return parseInt(res) + '小时前';
+  if( (res = iDis/6e4)  > 1 )return parseInt(res) + '分钟前'; 
   return '刚刚'; 
-
 }
 console.log( getDis('2012-3-23 10:10:10') );
 console.log( getDis('2014-8-23 10:10:10') );
